@@ -1,2 +1,1 @@
-This is me creating a file 
- 	Wooohoooo!!!!
+The preparatory course for this internship.
