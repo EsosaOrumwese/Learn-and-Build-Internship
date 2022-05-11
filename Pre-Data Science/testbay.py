@@ -9,4 +9,3 @@
 #     print("Command not found")
 
 
-assert 5 % 2 == 0
