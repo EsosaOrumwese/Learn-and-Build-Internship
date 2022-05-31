@@ -1,0 +1,116 @@
+Steps to take
+# Full name; phone number; email address
+
+Main
+    1. Initialize an empty dataframe for the contacts. 
+        contact = pd.DataFrame({"Full_Name":[],"Phone_No":[],"Email_Address":[]})
+        import pandas as pd 
+        import numpy as np
+    2. Show options [main()]
+    3. Request for input, i
+    4. An if-elif statement reads the input.
+        if i==1, 'add_contact()'
+        elif i==2, 'update_contact()'
+        elif i==3, 'delete_contact()'
+        elif i==4, 'show_one()'
+        elif i==5, show_all()'
+        else: Throw error
+    5. Do you want to continue [Y/N]
+        if Y, main()
+        else, exit
+
+def add_contact() ## adding new contact to contact list
+    1. full_name = input("Enter your full name")
+        if full_name is in "Full_Name" column:
+            print("Name already exists!")
+            break
+    2. phone_number = input("Enter your phone number") #take as string
+        if phone_number in "Phone_No" column:
+            print("Phone number already exists")
+            break
+    3. email_address = input("Enter your email address)
+        if email_address in "Email_Address" column:
+            print("Email address already exists")
+            break
+    dict={"Full_Name":[full_name], "Phone_No":[phone_number], "Email_Address":[email_address]}
+    new_df = pd.Dataframe(dict)  #create new dataframe
+    contact = pd.concat([contact,new_df], ignore_index=True)
+    return contact
+
+def update_contact() ## editing contact list
+    Find out what detail you want to update (Full_Name, Phone_No, email_address, or All)
+        if Full_Name, 
+            get data [vague steps]
+            replace data with that in Full_Name column\
+            print(Successful)
+        elif Phone_No
+            get data
+            replace data with that in Phone_No column
+            print(Successful)
+        elif Email_Address
+            get data
+            replace data with that in Email_Address column
+            print(Successful)
+        elif All
+            delete_contact()
+            add_contact()
+            print(Successful)
+        else: Throw an error
+    return contact
+
+def delete_contact() ## deleting contact from list
+    Request for full_name
+    if full_name in contact
+        find row_index,
+        del row
+        print("Successful")
+    else:
+        print("Contact not found")
+    return contact
+
+def show_one() ## show one contact detail
+    Show options
+    '''
+    Enter
+    1. Full name
+    2. Phone No
+    3. Email Address
+    '''
+    Get input, display
+    initialize empty df [results]
+    if display == 1
+        name = input("Enter name of contact")
+        name = name.split()
+        for n in name:
+            if n in split "Full name" column:
+                if n is not in [results]
+                    store row in [results]
+        if results is empty:
+            print("Name not found in contact list")
+        else:
+            print([results])
+    elif display == 2:
+        if phone_number in "Phone_No" column:
+            get row_index
+            print row
+        else:
+            print("Phone number not found!")
+    elif display == 3:
+        email_address = input("Enter email address")
+        if email_address in "Email_Address" column:
+            get row_index
+            print row
+        else:
+            print("Email address not found!")
+
+def show_all() ## show all contacts
+    if len(contact)==0:
+        print("There is no data in contact list")
+    else:
+        return contact
+
+
+                
+        
+            
+
